@@ -6,32 +6,40 @@ from torch.utils.data import DataLoader
 import torch.nn as nn
 import torch.optim as optim
 
+#********************************************************************************#
+#████████╗██████╗░░█████╗░██╗███╗░░██╗██╗███╗░░██╗░██████╗░
+#╚══██╔══╝██╔══██╗██╔══██╗██║████╗░██║██║████╗░██║██╔════╝░
+#░░░██║░░░██████╔╝███████║██║██╔██╗██║██║██╔██╗██║██║░░██╗░
+#░░░██║░░░██╔══██╗██╔══██║██║██║╚████║██║██║╚████║██║░░╚██╗
+#░░░██║░░░██║░░██║██║░░██║██║██║░╚███║██║██║░╚███║╚██████╔╝
+#░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝╚═╝╚═╝░░╚══╝░╚═════╝░
+# USING PYTORCH
+#
+# This code trains a ResNet-18 model on the dataset and saves the model to a file.
+# You can modify the data used by changing the DATASET variable.
 DATASET = "datasetV3"
-
-# Définir les transformations pour les données
-transform = transforms.Compose([
-    transforms.Resize((224, 224)),  # Redimensionner toutes les images à 224x224
-    transforms.ToTensor(),          # Convertir les images en tenseurs
-    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])  # Normalisation
-])
-
-# Chemins vers les données
 train_dir = f"{DATASET}/dataset/train"
 val_dir = f"{DATASET}/dataset/val"
 test_dir = f"{DATASET}/dataset/test"
+# It makes 10 epochs of training and 1 test of validation
+# It saves the model to a file named "{DATASET}_PYTORCH.pt"
+#********************************************************************************#
 
-# Charger les datasets
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+])
+
+# TRAIN VAL TERT DATASETS
 train_dataset = datasets.ImageFolder(root=train_dir, transform=transform)
 val_dataset = datasets.ImageFolder(root=val_dir, transform=transform)
 test_dataset = datasets.ImageFolder(root=test_dir, transform=transform)
 
-# Charger les données dans des DataLoaders
+# DATALOADERS
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
-
-
-
 
 # Charger un modèle ResNet pré-entraîné
 model = resnet18(pretrained=True)
