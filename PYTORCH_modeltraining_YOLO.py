@@ -6,6 +6,19 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+#********************************************************************************#
+#██╗░░░██╗░█████╗░██╗░░░░░░█████╗░
+#╚██╗░██╔╝██╔══██╗██║░░░░░██╔══██╗
+#░╚████╔╝░██║░░██║██║░░░░░██║░░██║
+#░░╚██╔╝░░██║░░██║██║░░░░░██║░░██║
+#░░░██║░░░╚█████╔╝███████╗╚█████╔╝
+#░░░╚═╝░░░░╚════╝░╚══════╝░╚════╝░
+#
+# ⚠️ WARNING ⚠️
+# ⚠️ THIS CODE DOESN'T WORK ⚠️
+# This my attempt to use a YOLO-formatted dataset with PyTorch/TensorFlow
+# It doesn't work because
+#*******************************************************************************#
 
 # --- Dataset Loader ---
 class MilitaryEquipmentDataset(Dataset):
