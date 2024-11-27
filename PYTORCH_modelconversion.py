@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 import torch.nn as nn
 import torch.optim as optim
 
-MODEL="datasetV1_PYTORCH"
+MODEL="datasetV3_PYTORCH"
 
 model = torch.load(f"models/{MODEL}.pt")
 model.eval()

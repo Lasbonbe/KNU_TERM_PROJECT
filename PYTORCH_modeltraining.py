@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 import torch.nn as nn
 import torch.optim as optim
 
-DATASET = "datasetV1"
+DATASET = "datasetV3"
 
 # Définir les transformations pour les données
 transform = transforms.Compose([
