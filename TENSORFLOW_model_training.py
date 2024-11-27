@@ -12,12 +12,12 @@ import onnxmltools
 #██║░░░░░██║░░██║██║░░██║██║░░██║██║░╚═╝░██║███████╗░░░██║░░░███████╗██║░░██║██████╔╝
 #╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░
 
-DATASETNAME = "datasetV2"
+DATASETNAME = "datasetV3"
 DATASET_VAL_PATH = f"{DATASETNAME}/dataset/val"
 DATASET_TEST_PATH = f"{DATASETNAME}/dataset/test"
 DATASET_TRAIN_PATH = f"{DATASETNAME}/dataset/train"
 
-NB_CLASSES_MODEL = 10
+NB_CLASSES_MODEL = 3
 
 
 #░█████╗░░█████╗░██████╗░███████╗
