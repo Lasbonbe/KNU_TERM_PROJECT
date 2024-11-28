@@ -104,20 +104,20 @@ The project leverages deep learning techniques using PyTorch and TensorFlow fram
 | Test Loss     | 0.14               | N/A             |
 
 
-### Usage
+### USAGE
 1. Train the model using PyTorch:
     ```sh
-    python PYTORCH_modeltraining_YOLO.py
+    python PYTORCH_modeltraining.py
     ```
 
 2. Convert the trained model to ONNX format:
     ```sh
-    python TENSORFLOW_modelconversion.py
+    python PYTORCH_modelconversion.py
     ```
 
 3. Run the target recognition system:
     ```sh
-    python run_target_recognition.py
+    python OPENCV_Missile.py
     ```
 
 ## References and Documentation
@@ -127,19 +127,14 @@ The project leverages deep learning techniques using PyTorch and TensorFlow fram
 
 ## Issues and Contributions
 ### Known Issues
-- The current model may not perform well in low-light conditions.
+- ⚠️ Some scripts don't work as expected due to compatibility issues with the libraries.
 - Limited dataset size may affect the generalization of the model.
+- ⚠️ The bounding box display in the OpenCV isn't accurate when zooming
 
-### Contributions
-We welcome contributions from the community. To contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
 
 ## Future Work
 - Improve the model's performance in low-light conditions.
+- Add Black And White Image Recognition. (Thermal Camera)
 - Expand the dataset to include more diverse military equipment.
 - Implement real-time target tracking capabilities.
 
