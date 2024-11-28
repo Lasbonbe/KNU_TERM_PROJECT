@@ -34,14 +34,19 @@ The source code for this project is organized as follows:
     ```
 
 ## Performance Metrics
-The performance of the model was evaluated based on the following metrics:
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='TENSORFLOW' src='https://img.shields.io/badge/TENSORFLOW-100000?style=for-the-badge&logo=TENSORFLOW&logoColor=white&labelColor=black&color=black'/></a>
+<br>
+![TENSORFLOW RESULTS](assets/tensor.gif)
+<br>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='PYTORCH' src='https://img.shields.io/badge/PYTORCH-100000?style=for-the-badge&logo=PYTORCH&logoColor=white&labelColor=black&color=black'/></a>
 
 | Metric        | Value (TensorFlow) | Value (PyTorch) |
 |---------------|--------------------|-----------------|
-| Accuracy      | 85%                | 85%             |
+| Test Accuracy | 91.66%             | 85%             |
+| Val Accuracy  | 56.28%             | 85%             |
 | Precision     | 82%                | 83%             |
-| TEST accuracy | 85%                | 85%             |
-
+| Val Loss      | 4.8459             | N/A             |
+| Test Loss     | 0.14               | N/A             |
 
 ## Installation and Usage
 ### Installation
@@ -89,3 +94,4 @@ We welcome contributions from the community. To contribute:
 - Improve the model's performance in low-light conditions.
 - Expand the dataset to include more diverse military equipment.
 - Implement real-time target tracking capabilities.
+
