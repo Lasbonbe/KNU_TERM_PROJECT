@@ -67,7 +67,7 @@ if boxes:
     class_id, confidence, (x1, y1, x2, y2) = boxes[0]
     centertank = ((x1 + x2) // 2, (y1 + y2) // 2)
 else:
-    ("No object detected.")
+    print("No object detected.")
     exit(0)
 
 image_height, image_width = image.shape[:2]
