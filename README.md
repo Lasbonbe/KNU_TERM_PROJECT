@@ -20,7 +20,7 @@
 - [Project Results and Overview](#project-results-and-overview)
 - [Source Code](#source-code)
 - [Performance Metrics](#performance-metrics)
-- [Installation and Usage](#installation-and-usage)
+- [Usage](#USAGE)
 - [References and Documentation](#references-and-documentation)
 - [Issues and Contributions](#issues-and-contributions)
 - [Future Work](#future-work)
@@ -38,6 +38,12 @@ The classes are:
 - <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='s' src='https://img.shields.io/badge/MILITARY_VEHICULE (Other Type of military vehicule)-100000?style=for-the-badge&logo=s&logoColor=white&labelColor=FFAC0F&color=FFAC0F'/></a>
 
 The project leverages deep learning techniques using PyTorch and TensorFlow frameworks.
+I first tried to use C++ for this project because of the real-time aspect of the project
+But after long issues with the Tensorflow C++ API, I decided to use Python for the project.
+The model is trained on a dataset of images of the target classes and then converted to ONNX format for compatibility with OpenCV.
+I used 2 different models for this project, one with PyTorch and the other with TensorFlow, to compare the performance of the two frameworks.
+The model is then integrated into an OpenCV-based missile targeting system that can recognize and track the target in real-time.
+
 
 ### Key Results:
 - Achieved an accuracy of **90%** on the validation dataset.
@@ -92,33 +98,54 @@ The project leverages deep learning techniques using PyTorch and TensorFlow fram
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='TENSORFLOW' src='https://img.shields.io/badge/TENSORFLOW-100000?style=for-the-badge&logo=TENSORFLOW&logoColor=white&labelColor=black&color=black'/></a>
 <br>
 ![TENSORFLOW RESULTS](assets/tensor.gif)
-<br>
+
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='PYTORCH' src='https://img.shields.io/badge/PYTORCH-100000?style=for-the-badge&logo=PYTORCH&logoColor=white&labelColor=black&color=black'/></a>
+<br>
+![PYTORCH RESULTS](assets/pytorch.png)
 
 | Metric        | Value (TensorFlow) | Value (PyTorch) |
 |---------------|--------------------|-----------------|
-| Test Accuracy | 91.66%             | 85%             |
-| Val Accuracy  | 56.28%             | 85%             |
-| Precision     | 82%                | 83%             |
+| Test Accuracy | 91.66%             | 86%             |
+| Val Accuracy  | 56.28%             | 83%             |
+| Precision     | 82%                | N/A             |
 | Val Loss      | 4.8459             | N/A             |
-| Test Loss     | 0.14               | N/A             |
+| Test Loss     | 0.14               | 0.046           |
+
+HARDWARE USED TO TRAIN THE MODEL:
+- CPU: Ryzen 9 5900HX
+- GPU: RTX 3080
+- VRAM: 16GB
+- RAM: 64GB
 
 
-### USAGE
-1. Train the model using PyTorch:
-    ```sh
-    python PYTORCH_modeltraining.py
-    ```
+## USAGE
+1. Train the model using the following scripts:
+<br>
+`PYTORCH_modeltraining.py` / `TENSORFLOW_modeltraining.py`
+⚠️ PYTORCH RECOMMENDED ⚠️
+
 
 2. Convert the trained model to ONNX format:
+   <br>
+   FOR PYTORCH: `PYTORCH_modelconversion.py`
+   <br>
+   FOR TENSORFLOW: `TENSORFLOW_modelconversion.py`  
+   <br> OR
     ```sh
-    python PYTORCH_modelconversion.py
+    python -m tf2onnx.convert --saved-model model_tf --output model.onnx
     ```
+   ⚠️ PYTORCH RECOMMENDED ⚠️ 
+   YOU NEED SPECIAL TENSORFLOW VERSION 1.15 TO CONVERT THE MODEL TO SAVEMODEL TO ONNX ⚠️
+   <br>
 
-3. Run the target recognition system:
-    ```sh
-    python OPENCV_Missile.py
-    ```
+
+3. Run the target recognition system: `OPENCV_Missile.py`
+
+   
+4. The test image will be displayed, Press any key to start the recognition process'
+5. The model will identify the target and display the bounding box around it. Press any key to exit the program.
+6. The model will now continually identify the target in real-time.
+7. Press ESC to exit the program.
 
 ## References and Documentation
 - [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
