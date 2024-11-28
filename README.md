@@ -2,6 +2,16 @@
 #### STUDENT ID : B202400543  
 #### NAME : 마티스 앙리 
 
+
+## SOMMAIRE
+- [Project Results and Overview](#project-results-and-overview)
+- [Source Code](#source-code)
+- [Performance Metrics](#performance-metrics)
+- [Installation and Usage](#installation-and-usage)
+- [References and Documentation](#references-and-documentation)
+- [Issues and Contributions](#issues-and-contributions)
+- [Future Work](#future-work)
+
 ![Missile Schema](assets/missileschema.png)
 
 ## Project Results and Overview
@@ -14,8 +24,8 @@ The classes are:
 The project leverages deep learning techniques using PyTorch and TensorFlow frameworks.
 
 ### Key Results:
-- Achieved an accuracy of 85% on the validation dataset.
-- Successfully converted the trained model to ONNX format for compatibility with OpenCV.
+- Achieved an accuracy of **90%** on the validation dataset.
+- Successfully converted the trained models (.tf / .pb .h5) to ONNX format for compatibility with OpenCV.
 - Demonstrated real-time target recognition with a high degree of accuracy.
 
 ## Source Code
