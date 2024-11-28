@@ -1,5 +1,11 @@
 # Development of a Target Recognition Model for Missile Targeting System
-#### STUDENT ID : B202400543  
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='PYTHON' src='https://img.shields.io/badge/3.12-100000?style=for-the-badge&logo=PYTHON&logoColor=white&labelColor=3950FF&color=3950FF'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='TENSORFLOW' src='https://img.shields.io/badge/TENSORFLOW-100000?style=for-the-badge&logo=TENSORFLOW&logoColor=white&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='PYTORCH' src='https://img.shields.io/badge/PYTORCH-100000?style=for-the-badge&logo=PYTORCH&logoColor=white&labelColor=black&color=black'/></a>
+<br>
+![Last Commit](https://img.shields.io/github/last-commit/Lasbonbe/KNU_TERM_PROJECT)
+![Code Size](https://img.shields.io/github/languages/code-size/Lasbonbe/KNU_TERM_PROJECT)
+#### STUDENT ID : B202400543
 #### NAME : 마티스 앙리 
 
 
@@ -39,9 +45,37 @@ The project leverages deep learning techniques using PyTorch and TensorFlow fram
 - Demonstrated real-time target recognition with a high degree of accuracy.
 
 ## Source Code
-The source code for this project is organized as follows:
 
-### Instructions for Setup
+### FOLDERS
+
+- `assets/`: Contains images and other assets used in the README.
+- `models/`: Contains the trained PyTorch and TensorFlow models.
+- `ONNX_models/`: Contains the converted ONNX models.
+- `datasetV3/` : Contains the dataset used for training the model.
+- `images_for_test/` : Contains the images used for testing the model.
+
+### MAIN SCRIPTS
+- `requirements.txt`: Contains the required libraries for the project.
+----
+- `DATASET_conversion.py`: This script converts the dataset to the required format for training.
+- `DATASET_Download.py`: This script downloads the dataset from Kaggle.
+----
+- `PYTORCH_modeltraining.py`: This script trains the target recognition model using PyTorch.
+- `PYTORCH_modelconversion.py`: This script converts the trained PyTorch model to ONNX format.
+- `PYTORCH_modeltraining_YOLO.py`: This script trains the target recognition model using PyTorch with YOLO Dataset Format. ⚠️ DOES NOT WORK ⚠️
+----
+- `TENSORFLOW_modelconversion.py`: This script converts the trained PyTorch model to TensorFlow format.
+- `TENSORFLOW_modeltraining.py`: This script trains the target recognition model using TensorFlow.
+- `TENSORFLOW_freeze.py`: This script freezes the TensorFlow model for conversion to ONNX format. ⚠️BASICALY USELESS⚠️
+----
+- `OPENCV_Missile.py`: **MAIN INTEREST FILE** This script runs the target recognition system using OpenCV.
+
+### TESTING/TROUBLESHOOTING SCRIPTS
+- `TESTING.py`: The first iteration of OPENCV_Missile.py | Used mainly for testing new features and called functions to make the main file more visible.
+- `TESTING_VERSION.py`: This script is used to test the different versions of the pip libraries.
+
+
+## SETUP
 1. Clone the repository:
     ```sh
     git clone https://github.com/yourusername/your-repo.git
@@ -52,6 +86,7 @@ The source code for this project is organized as follows:
     ```sh
     pip install -r requirements.txt
     ```
+   
 
 ## Performance Metrics
 <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='TENSORFLOW' src='https://img.shields.io/badge/TENSORFLOW-100000?style=for-the-badge&logo=TENSORFLOW&logoColor=white&labelColor=black&color=black'/></a>
@@ -68,13 +103,6 @@ The source code for this project is organized as follows:
 | Val Loss      | 4.8459             | N/A             |
 | Test Loss     | 0.14               | N/A             |
 
-## Installation and Usage
-### Installation
-1. Ensure you have Python 3.8+ installed.
-2. Install the required libraries:
-    ```sh
-    pip install torch torchvision tensorflow tf2onnx opencv-python pillow
-    ```
 
 ### Usage
 1. Train the model using PyTorch:
