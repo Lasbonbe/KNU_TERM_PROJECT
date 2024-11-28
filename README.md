@@ -3,7 +3,14 @@
 #### NAME : 마티스 앙리 
 
 
-## SOMMAIRE
+
+<details>
+<summary>
+
+# **SUMMARY**
+
+</summary>
+
 - [Project Results and Overview](#project-results-and-overview)
 - [Source Code](#source-code)
 - [Performance Metrics](#performance-metrics)
@@ -11,6 +18,9 @@
 - [References and Documentation](#references-and-documentation)
 - [Issues and Contributions](#issues-and-contributions)
 - [Future Work](#future-work)
+
+</details>
+
 
 ![Missile Schema](assets/missileschema.png)
 
