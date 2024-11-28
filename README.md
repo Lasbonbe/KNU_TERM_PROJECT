@@ -120,9 +120,11 @@ HARDWARE USED TO TRAIN THE MODEL:
 
 ## USAGE
 1. Train the model using the following scripts:
-<br>
-`PYTORCH_modeltraining.py` / `TENSORFLOW_modeltraining.py`
-⚠️ PYTORCH RECOMMENDED ⚠️
+    <br>
+    FOR PYTORCH: `PYTORCH_modeltraining.py`
+    <br>
+    FOR TENSORFLOW: `TENSORFLOW_modeltraining.py`
+   ⚠️ PYTORCH RECOMMENDED ⚠️
 
 
 2. Convert the trained model to ONNX format:
