@@ -130,11 +130,11 @@ def preview(path):
             cv2.putText(displayed_image, "Tank", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
         elif predicted == 1:
             cv2.rectangle(displayed_image, (x1, y1), (x2, y2), (222, 12, 255), 2)
-            cv2.putText(displayed_image, "SPAA", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
+            cv2.putText(displayed_image, "SPAA", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (222, 12, 255), 2)
         else:
             cv2.rectangle(displayed_image, (x1, y1), (x2, y2), (15, 172, 255), 2)
             cv2.putText(displayed_image, "Military vehicle", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9,
-                        (255, 0, 0), 2)
+                        (15, 172, 255), 2)
 
         cv2.imshow("Zooming Image", displayed_image)
         key = cv2.waitKey(2) & 0xFF
