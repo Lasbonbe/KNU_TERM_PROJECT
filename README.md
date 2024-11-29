@@ -84,7 +84,7 @@ The model is then integrated into an OpenCV-based missile targeting system that 
 ## SETUP
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repo.git
+    git clone https://github.com/Lasbonbe/KNU_TERM_PROJECT.git
     cd your-repo
     ```
 
@@ -142,12 +142,17 @@ HARDWARE USED TO TRAIN THE MODEL:
 
 
 3. Run the target recognition system: `OPENCV_Missile.py`
+You can use different images for testing the model by placing them in the `images_for_test` folder.
 
-   
 4. The test image will be displayed, Press any key to start the recognition process'
+
 5. The model will identify the target and display the bounding box around it. Press any key to exit the program.
+
 6. The model will now continually identify the target in real-time.
+
 7. Press ESC to exit the program.
+
+
 
 ## References and Documentation
 - [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
