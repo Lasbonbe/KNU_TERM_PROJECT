@@ -142,7 +142,7 @@ HARDWARE USED TO TRAIN THE MODEL:
 
 
 3. Run the target recognition system: `OPENCV_Missile.py`
-You can use different images for testing the model by placing them in the `images_for_test` folder.
+You can use different images for testing the model by using provided images in the `images_for_test` folder.
 
 4. The test image will be displayed, Press any key to start the recognition process'
 
